@@ -1,0 +1,40 @@
+H1 {
+    font-family: "georgia" ;
+    font-size:20pt; 
+    color:chocolate;
+    text-align:center;
+    text-decoration:overline underline }
+H2 {
+    font-family : "georgia" ;
+    font-size:14pt; 
+    color:blue;
+    font-weight:bold }	
+H3 {
+    font-family : "georgia" ;
+    font-size:14pt;
+    color:red;
+    font-style:italic;
+    font-weight:normal;}	
+H4 {
+    font-family : "times new roman" ;
+    font-size:12pt;
+    text-align:justify;
+    line-height : 1.5;
+    text-indent : 25px;
+    font-weight:normal;
+    }
+P2 {
+    font-family : "courier" ;
+    font-size:12pt;
+    list-style-type :upper-alpha
+    }
+P3 {
+    font-family : "arial" ;
+    font-size:12pt;
+    list-style-type :upper-roman
+    }
+P4 {
+    font-family : "verdana" ;
+    font-size:12pt;
+    list-style-type :square
+    }
