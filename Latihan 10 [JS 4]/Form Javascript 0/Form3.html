@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE = "JavaScript">
+    function Hitung(){
+        Bilangan1 = document.frm.B1.value;
+        Bilangan2 = document.frm.B2.value;
+        Jumlah = Bilangan1 + Bilangan2;
+        document.frm.JM.value = Jumlah;
+    }
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM NAME="frm">
+    <TABLE>
+
+    <TR>
+        <TD>Bilangan Pertama :</TD>
+        <TD><INPUT TYPE="text" NAME="B1"></TD>
+    </TR>
+    <TR>
+        <TD>Bilangan Kedua :</TD>
+        <TD><INPUT TYPE="text" NAME=B2></TD>
+    </TR>
+
+    <TR>
+        <TD COLSPAN="2" ALIGN="center"><HR>
+        <INPUT TYPE="button" VALUE="Hitung" ONCLICK="Hitung()">
+        <INPUT TYPE="reset" VALUE="Hapus"><HR></TD>
+    </TR>
+
+    <TR>
+        <TD>Jumlah :</TD>
+        <TD><INPUT TYPE="text" NAME="JM" READONLY></TD>
+    </TR>
+
+    </TABLE>
+</FORM>
+</BODY>
+</HTML>

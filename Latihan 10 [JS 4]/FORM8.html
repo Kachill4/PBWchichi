@@ -1,0 +1,128 @@
+<HTML>
+
+<HEAD>
+    <SCRIPT LANGUAGE = "JavaScript">
+      function Hitung() {
+//Masa Kerja
+        pilihan = document.frm.masakerja.selectedIndex;
+            switch (pilihan){
+                case 0 : gp=0; break;
+                case 1 : gp=900000; break;
+                case 2 : gp=900000; break;
+                case 3 : gp=900000; break;
+                case 4 : gp=1500000; break;
+                case 5 : gp=1500000; break;
+                case 6 : gp=2500000;
+            }
+        document.frm.GajiPokok.value = gp;
+
+//Jabatan
+        pilihan = document.frm.jabatan.selectedIndex;
+            switch (pilihan){
+                case 0 : tj=0; break;
+                case 1 : tj=5000000; break;
+                case 2 : tj=3000000; break;
+                case 3 : tj=0; break;
+            }
+        document.frm.TunjanganJabatan.value = tj;
+
+//Status
+        if (document.frm.status[0].checked)
+            {tk=gp*25/100;}
+        else if (document.frm.status[1].checked)
+            {tk=0;}
+        document.frm.TunjanganKeluarga.value = tk;
+
+//Status
+        Kasbon = parseInt(document.frm.kasbon1.value);
+        document.frm.KasbonAkhir.value = Kasbon;
+
+//Gaji Bersih
+        Total = gp + tj + tk - Kasbon;
+        document.frm.GajiBersih.value = Total;
+      }
+    </SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM NAME="frm">
+    <TABLE>
+
+    <TR>
+        <TD ALIGN="RIGHT">Masa Kerja :</TD>
+        <TD>
+            <SELECT NAME="masakerja">
+                <OPTION>(Pilih Tahun)
+                <OPTION>1 Tahun
+                <OPTION>2 Tahun
+                <OPTION>3 Tahun
+                <OPTION>4 Tahun
+                <OPTION>5 Tahun
+                <OPTION>>5 Tahun
+              </SELECT>
+            </TD>
+    </TR>
+
+    <TR>
+        <TD ALIGN="RIGHT">Jabatan: </TD>
+        <TD>
+            <SELECT NAME="jabatan">
+                <OPTION>(Pilih Jabatan))
+                <OPTION>Direksi
+                <OPTION>KaBag
+                <OPTION>Staff
+              </SELECT>
+            </TD>
+    </TR>
+
+    <TR>
+        <TD ALIGN="RIGHT" VALIGN="top">Status : <BR></TD>
+        <TD><INPUT TYPE="radio" NAME="status"> Menikah <BR>
+            <INPUT TYPE="radio" NAME="status" CHECKED> Belum Menikah <BR>
+        </TD>
+    </TR>
+
+    <TR>
+        <TD ALIGN="RIGHT" >Kasbon :</TD>
+        <TD><INPUT TYPE="text" NAME="kasbon1" value="0"></TD>
+    </TR>
+
+    <TR>
+        <TD COLSPAN="2" ALIGN="center"><HR>
+            <INPUT TYPE="button" VALUE="Submit" ONCLICK="Hitung()">
+            <INPUT TYPE="reset" VALUE="Delete">
+        <HR></TD>
+    </TR>
+
+          <TR>
+            <TD ALIGN="RIGHT">Gaji Pokok :</TD>
+            <TD><INPUT TYPE="text" NAME="GajiPokok"></TD>
+          </TR>
+
+    <TR>
+        <TD ALIGN="RIGHT"> Tunjangan Jabatan :</TD>
+        <TD><INPUT  TYPE="text" NAME="TunjanganJabatan"   READONLY></TD>
+    </TR>
+
+    <TR>
+        <TD ALIGN="RIGHT"> Tunjangan Keluarga :</TD>
+        <TD><INPUT  TYPE="text" NAME="TunjanganKeluarga"   READONLY></TD>
+    </TR>
+
+    <TR>
+        <TD ALIGN="RIGHT"> Kasbon :</TD>
+        <TD><INPUT  TYPE="text" NAME="KasbonAkhir"   READONLY></TD>
+    </TR>
+
+    <TR>
+        <TD ALIGN="RIGHT"> Gaji Bersih :</TD>
+        <TD><INPUT  TYPE="text" NAME="GajiBersih"   READONLY></TD>
+    </TR>
+
+
+    </TABLE>
+</FORM>
+
+</BODY>
+
+</HTML>

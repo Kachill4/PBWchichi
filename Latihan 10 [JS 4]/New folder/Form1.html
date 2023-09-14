@@ -1,0 +1,25 @@
+<HTML>
+<HEAD><SCRIPT LANGUAGE = "JavaScript">
+function Hitung()
+{
+   Panjang = document.frm.P.value;
+   Lebar = document.frm.L.value;
+   Tinggi = document.frm.T.value; 
+   Volume = Panjang * Lebar * Tinggi; 
+   document.frm.V.value = Volume;
+}
+</SCRIPT></HEAD>
+
+<BODY><FORM NAME="frm"><TABLE>
+<TR><TD>Panjang :</TD>
+    <TD><INPUT TYPE="text" NAME="P"></TD></TR>
+<TR><TD>Lebar :</TD>
+    <TD><INPUT TYPE="text" NAME="L"></TD></TR>
+<TR><TD>Tinggi :</TD>
+    <TD><INPUT TYPE="text" NAME="T"></TD></TR>
+<TR><TD COLSPAN="2" ALIGN="center"><HR>
+    <INPUT TYPE="button" VALUE="Hitung" ONCLICK="Hitung()">
+    <INPUT TYPE="reset" VALUE="Hapus"><HR></TD></TR>
+<TR><TD>Volume :</TD>
+    <TD><INPUT TYPE="text" NAME="V" READONLY></TD></TR>
+</TABLE></FORM></BODY></HTML>

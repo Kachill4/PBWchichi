@@ -1,0 +1,97 @@
+<HTML>
+
+<HEAD>
+    <SCRIPT LANGUAGE = "JavaScript">
+        function Hitung() {
+//Kode Program
+            if (document.frm.KODE[0].checked)
+                {PS="Aplikasi Bisnis";
+                 BP=3400000;}
+            else if (document.frm.KODE[1].checked)
+                {PS="Sekretari Profesional";
+                 BP=3750000;}
+            else if (document.frm.KODE[2].checked)
+                {PS="Multimedia Interaktif ";
+                 BP=6000000;}
+            else if (document.frm.KODE[3].checked)
+                {PS="Web Master";
+                 BP=5000000;}
+            document.frm.prog.value = PS;
+            document.frm.bipen.value = BP;
+//Fasilitas
+            if (document.frm.FD.checked)
+                 {BT1=50000;}
+            else {BT1=0;}
+            if (document.frm.JA.checked)
+                 {BT2=175000;}
+            else {BT2=0;}
+            if (document.frm.DK.checked)
+                 {BT3=80000;}
+            else {BT3=0;}
+            BT = BT1 + BT2 + BT3;
+            document.frm.tambahan.value = BT;
+
+            Total = BP + BT;
+            document.frm.JumlahBiaya.value = Total;
+        }
+    </SCRIPT>
+</HEAD>
+
+<BODY>
+    <FORM NAME="frm">
+    <TABLE>
+
+    <TR>
+        <TD ALIGN="RIGHT">NPM :</TD>
+        <TD><INPUT TYPE="text" NAME="NPM"></TD>
+    </TR>
+
+    <TR>
+        <TD ALIGN="RIGHT" VALIGN="top">Kode Program : <BR></TD>
+        <TD><INPUT TYPE="radio" NAME="KODE"> AB <BR>
+            <INPUT TYPE="radio" NAME="KODE"> SP <BR>
+            <INPUT TYPE="radio" NAME="KODE"> MI <BR>
+            <INPUT TYPE="radio" NAME="KODE"> WM
+        </TD>
+    </TR>
+
+    <TR>
+        <TD ALIGN="RIGHT" VALIGN="top" >Fasilitas :</TD>
+        <TD><INPUT TYPE="checkbox" NAME="FD">Flash Disk <BR>
+            <INPUT TYPE="checkbox" NAME="JA">Jaket Almamater <BR>
+            <INPUT TYPE="checkbox" NAME="DK">Diktat Kuliah </TD>
+    </TR>
+
+    <TR>
+        <TD COLSPAN="2" ALIGN="center"><HR>
+        <INPUT  TYPE="button"   VALUE="Submit"
+                ONCLICK="Hitung()">
+        <INPUT  TYPE="reset"    VALUE="Delete"><HR></TD>
+    </TR>
+
+    <TR>
+        <TD ALIGN="RIGHT">Program Studi :</TD>
+        <TD><INPUT  TYPE="text" NAME="prog"   READONLY></TD>
+    </TR>
+
+    <TR>
+        <TD ALIGN="RIGHT">Biaya Pendidikan :</TD>
+        <TD><INPUT  TYPE="text" NAME="bipen"   READONLY></TD>
+    </TR>
+
+    <TR>
+        <TD ALIGN="RIGHT"> Biaya Tambahan :</TD>
+        <TD><INPUT  TYPE="text" NAME="tambahan"   READONLY></TD>
+    </TR>
+
+    <TR>
+        <TD ALIGN="RIGHT"> Jumlah Biaya :</TD>
+        <TD><INPUT  TYPE="text" NAME="JumlahBiaya"   READONLY></TD>
+    </TR>
+
+
+    </TABLE>
+    </FORM>
+
+</BODY>
+</HTML>

@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE = "JavaScript">
+    function Hitung(){
+        if (document.frm.pot1.checked)
+            {p1=5000;}
+        else {p1=0;}
+        if (document.frm.pot2.checked)
+            {p2=3000;}
+        else {p2=0;}
+        jp = p1 + p2;
+        document.frm.jumpot.value = jp;
+    }
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM NAME="frm">
+    <TABLE>
+    <TR>
+        <TD VALIGN="top">Potongan :</TD>
+        <TD><INPUT TYPE="checkbox" NAME="pot1">Iuran Koperasi <BR>
+            <INPUT TYPE="checkbox" NAME="pot2">Iuran Serikat Pekerja </TD>
+    </TR>
+
+    <TR>
+        <TD COLSPAN="2" ALIGN="center"><HR>
+        <INPUT TYPE="button" VALUE="Hitung" ONCLICK="Hitung()">
+        <INPUT TYPE="reset" VALUE="Hapus"><HR></TD>
+    </TR>
+
+    <TR>
+        <TD>Jumlah Potongan :</TD>
+        <TD><INPUT TYPE="text" NAME="jumpot"></TD>
+    </TR>
+    </TABLE>
+</FORM>
+</BODY>
+
+</HTML>

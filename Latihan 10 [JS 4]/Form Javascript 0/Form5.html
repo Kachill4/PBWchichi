@@ -1,0 +1,43 @@
+<HTML>
+<HEAD>
+    <SCRIPT LANGUAGE = "JavaScript">
+      function Hitung() {
+        if (document.frm.gol[0].checked)
+            {gp=900000;}
+        else if (document.frm.gol[1].checked)
+            {gp=750000;}
+        else if (document.frm.gol[2].checked)
+            {gp=600000;}
+        document.frm.gapok.value = gp;
+      }
+    </SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM NAME="frm">
+    <TABLE>
+    <TR>
+        <TD VALIGN="top">Golongan :</TD>
+        <TD><INPUT TYPE="radio" NAME="gol"> I <BR>
+            <INPUT TYPE="radio" NAME="gol"> II <BR>
+            <INPUT TYPE="radio" NAME="gol" CHECKED> III
+        </TD>
+    </TR>
+
+    <TR>
+        <TD COLSPAN="2" ALIGN="center"><HR>
+        <INPUT TYPE="button" VALUE="Hitung" ONCLICK="Hitung()">
+        <INPUT TYPE="reset" VALUE="Hapus"><HR></TD>
+    </TR>
+
+    <TR>
+        <TD>Gaji Pokok :</TD>
+        <TD><INPUT TYPE="text" NAME="gapok"></TD>
+    </TR>
+
+    </TABLE>
+</FORM>
+</BODY>
+
+</HTML>
+

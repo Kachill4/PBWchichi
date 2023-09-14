@@ -1,0 +1,48 @@
+<HTML>
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+  function Hitung(){
+      pilihan = document.frm.gol.selectedIndex; 
+      switch (pilihan){
+        case 0 : gp=900000; break;
+        case 1 : gp=750000; break;
+        case 2 : gp=600000;  
+      }
+      document.frm.gapok.value = gp;
+  }
+  </SCRIPT>
+</HEAD>
+
+<BODY>
+  <FORM NAME="frm">
+    <TABLE>
+
+    <TR>
+      <TD>Golongan :</TD>
+      <TD>
+        <SELECT NAME="gol">
+          <OPTION>I
+          <OPTION SELECTED>II
+          <OPTION>III
+        </SELECT>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD COLSPAN="2" ALIGN="center">
+        <HR><INPUT TYPE="button" VALUE="Hitung" ONCLICK="Hitung()">
+            <INPUT TYPE="reset" VALUE="Hapus">
+        <HR>
+      </TD>
+    </TR>
+
+    <TR>
+      <TD>Gaji Pokok :</TD>
+      <TD><INPUT TYPE="text" NAME="gapok"></TD>
+    </TR>
+
+    </TABLE>
+  </FORM>
+
+</BODY>
+</HTML>
