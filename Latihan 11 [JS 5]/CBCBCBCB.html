@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript - Mengambil nilai dari Checkbox dan Radio Button</title>
+<script>
+function displayResult(browser)
+{ document.getElementById("result").value=browser; }
+function displayAlert()
+{   var x=document.getElementById("result").value;
+    if (x=="")
+    {   alert("Please select your favorite browser!");
+        form.browser[0].focus();
+        return false;
+    }
+    else
+        alert(x + " is your favorite browser");
+}
+function displayResult2(frm)
+{   var selectedbrowser="";
+    for (i = 0; i < frm.browser2.length; i++)
+    {   if (frm.browser2[i].checked)
+        {   selectedbrowser += frm.browser2[i].value +", ";}
+    }
+    document.getElementById("result2").value=selectedbrowser;
+}
+function displayAlert2(frm)
+{   var selectedbrowser="";
+    for (i = 0; i < frm.browser2.length; i++)
+    {   if (frm.browser2[i].checked)
+        {   selectedbrowser += frm.browser2[i].value +", ";}
+    }
+    if (selectedbrowser=="")
+    {   alert("Please select your favorite browser!");
+        form.browser2[0].focus();
+        return false;
+    }
+    else
+    alert("Your favorite browser : " + selectedbrowser);
+}
+</script>
+</head>
+<body>
+<p>Select your favorite browser:</p>
+<form>
+<input type="radio" name="browser" onclick="displayResult(this.value)" value="Internet Explorer">Internet Explorer<br>
+<input type="radio" name="browser" onclick="displayResult(this.value)" value="Firefox">Firefox<br>
+<input type="radio" name="browser" onclick="displayResult(this.value)" value="Opera">Opera<br>
+<input type="radio" name="browser" onclick="displayResult(this.value)" value="Google Chrome">Google Chrome<br>
+<input type="radio" name="browser" onclick="displayResult(this.value)" value="Safari">Safari<br><br>
+Your favorite browser is: <input type="text" id="result"><br>
+<button type="button" onclick="displayAlert()">Display value of radio button in alert</button>
+<br><hr>
+<p>Select your favorite browser:</p>
+<input type="checkbox" name="browser2" onclick="displayResult2(this.form)" value="Internet Explorer">Internet Explorer<br>
+<input type="checkbox" name="browser2" onclick="displayResult2(this.form)" value="Firefox">Firefox<br>
+<input type="checkbox" name="browser2" onclick="displayResult2(this.form)" value="Opera">Opera<br>
+<input type="checkbox" name="browser2" onclick="displayResult2(this.form)" value="Google Chrome">Google Chrome<br>
+<input type="checkbox" name="browser2" onclick="displayResult2(this.form)" value="Safari">Safari<br><br>
+Your favorite browser: <input type="text" id="result2" size="60"><br>
+<button type="button" onclick="displayAlert2(this.form)">Display value of radio button in alert</button>
+</form>
+</body>
+</html>

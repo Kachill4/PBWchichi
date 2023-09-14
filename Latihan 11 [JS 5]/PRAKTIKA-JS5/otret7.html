@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+    <SCRIPT LANGUAGE = "JavaScript">
+        function validasi(){
+            kiri = document.frm.xkiri.value;
+            if (kiri==""){
+                alert("Data 1 tidak boleh dikosongkan !");
+                document.frm.xkiri.focus(); 
+            }
+            else if (isNaN(kiri)){
+                alert("Data harus berupa angka !");
+                document.frm.xkiri.focus(); 
+            }
+            else{
+                kiri = parseInt(document.frm.xkiri.value);
+            }
+
+
+            kanan = document.frm.xkanan.value;
+            if (kanan==""){
+                alert("Data 2 tidak boleh dikosongkan !");
+                document.frm.xkanan.focus(); 
+            }
+            else if (isNaN(kanan)){
+                alert("Data harus berupa angka !");
+                document.frm.xkanan.focus(); 
+            }
+            else{
+                kanan = parseInt(document.frm.xkanan.value);
+            }
+
+            hasil = 0;
+            pilihan = document.frm.kabataku.selectedIndex; 
+                switch (pilihan){
+                    case 0 : hasil = kiri + kanan; break;
+                    case 1 : hasil = kiri - kanan; break;
+                    case 2 : hasil = kiri * kanan; break;
+                    case 3 : hasil = kiri / kanan;
+                }
+            document.frm.xhasil.value = hasil;
+        }
+    </SCRIPT>
+</HEAD>
+    
+<BODY>
+    Kalkulator Sederhana
+
+<FORM NAME="frm">
+    <TABLE> <TR style = background-color:rgb(79,42,182) Height=65px ><TD>
+        <TABLE><TR>
+        <TD><INPUT TYPE="text" NAME="xkiri" SIZE="7" placeholder="Data 1"></TD>
+        <TD><SELECT NAME="kabataku">
+            <OPTION>+
+            <OPTION>-
+            <OPTION>x
+            <OPTION>:    
+            </SELECT></TD>
+        <TD><INPUT TYPE="text"   NAME="xkanan"  SIZE="7" placeholder="Data 2"></TD>
+        <TD><INPUT TYPE="button" VALUE="="      ONCLICK="validasi()"></TD>
+        <TD><INPUT TYPE="text"   NAME="xhasil"  SIZE="7" placeholder="Hasil"></TD></TR>
+        </TABLE></TH></TD>
+    </TR></TABLE>
+</FORM>
+</BODY>
+</HTML>
+    

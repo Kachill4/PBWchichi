@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE = "JavaScript">
+   function validasi(){
+      ipk = document.frm.xipk.value;
+      if (ipk==""){
+         alert("Data IPK tidak boleh dikosongkan !");
+         document.frm.xipk.focus(); 
+      }
+      else if (isNaN(ipk)){
+         alert("Data IPK hanya terdiri atas angka !");
+         document.frm.xipk.focus(); 
+      }
+      else if ((ipk<0)||(ipk>4)){
+         alert("Nilai IPK harus antara 0.00-4.00 !");
+         document.frm.xipk.focus(); 
+      }
+      else{
+         alert("Data IPK sudah benar !");
+      }
+   }
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM NAME="frm">
+   <TABLE>
+   <TR>
+      <TD>I P K :</TD>
+      <TD><INPUT TYPE="text" NAME="xipk"></TD>
+   </TR>
+   <TR>
+      <TD COLSPAN="2" ALIGN="center"><HR>
+         <INPUT TYPE="button" VALUE="Cek Validasi" ONCLICK="validasi()">
+         <INPUT TYPE="reset" VALUE="Hapus"><HR></TD>
+   </TR>
+   </TABLE>
+</FORM></BODY></HTML>

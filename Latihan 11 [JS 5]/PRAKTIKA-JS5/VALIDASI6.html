@@ -1,0 +1,151 @@
+<HTML>
+    <HEAD>
+    <SCRIPT LANGUAGE = "JavaScript">
+       function validasi(){
+//No.Terminal
+        no = document.frm.terminal.value;
+        if (no==""){
+            alert("No.Terminal harus diisi !");
+            document.frm.terminal.focus();
+        }
+        else if (isNaN(no)){
+            alert("No.Terminal hanya terdiri atas angka !");
+            document.frm.terminal.focus();
+        }
+        else if ((no<1)||(no>20)){
+            alert("No.Terminal terdiri atas angka 1 - 20 !");
+            document.frm.terminal.focus();
+        }
+
+//Pilihan jenis ruang
+        if (document.frm.JENIS[0].checked)
+                {jr= "Perokok";}
+        else if (document.frm.JENIS[1].checked)
+                {jr= "Ber-AC";}
+
+//Tarif
+        if (document.frm.TARIF[0].checked)
+                {t= "Umum";}
+        else if (document.frm.TARIF[1].checked)
+                {t= "Anggota";}
+
+//Harga
+        if ((jr= "Perokok") && (t= "Umum"))
+            {harga=3000;}
+        else if ((jr= "Ber-AC") && (t= "Umum"))
+            {harga=4500;}
+        else if ((jr= "Perokok") && (t= "Anggota"))
+            {harga=2000;}
+        else if ((jr= "Ber-AC") && (t= "Anggota"))
+            {harga=3000;}
+
+//Lama Rental
+        Lama = document.frm.LamaRental.value;
+        if (Lama==""){
+            alert("Lama Rental harus diisi !");
+            document.frm.LamaRental.focus();
+        }
+        else if (isNaN(Lama)){
+            alert("Lama Rental hanya terdiri atas angka !");
+            document.frm.LamaRental.focus();
+        }
+        else if ((Lama<1)){
+            alert("Lama Rental tidak boleh angka negatif !");
+            document.frm.LamaRental.focus();
+        }
+
+//Biaya Rental
+        br=harga*Lama;
+        document.frm.bire.value = br;
+        if(Lama>4){diskon = 0.3}
+        else diskon = 0
+        brd = (Lama-4)*harga *diskon;
+        TotalTagihan = br-brd;
+        document.frm.bire.value = TotalTagihan;
+
+
+
+//Jumlah Print
+        prt = document.frm.JumlahPrint.value;
+        if (isNaN(prt)){
+            alert("Lama Rental hanya terdiri atas angka !");
+            document.frm.JumlahPrint.focus();
+        }
+        else if ((prt<0)){
+            alert("Lama Rental tidak boleh angka negatif !");
+            document.frm.JumlahPrint.focus();
+        }
+
+        if (prt>0 && prt<100){kertas = 400;}
+        else if (prt>100 ){kertas = 300;}
+        else kertas = 0;
+
+        banyak=prt*kertas;
+        document.frm.jupri.value = banyak;
+
+        st=TotalTagihan+banyak;
+        document.frm.subtotal.value = st;
+    }
+    </SCRIPT>
+    </HEAD>
+
+<BODY>
+    <FORM NAME="frm">
+       <TABLE style = background-color:rgb(169,223,119)>
+        <TR style = background-color:rgb(1,196,255)  SIZE="10">
+            <TH width="35" scope="col"  COLspan="2"> 
+            <FONT COLOR="White"><B> WARNET ABC</B></FONT>
+              </TH>
+          </TR>
+          <TR><TD>&nbsp;</TD></TR>
+        <TR>
+            <TD ALIGN="RIGHT" VALIGN="top" >No.Terminal :</TD>
+            <TD><INPUT TYPE="text" NAME="terminal" placeholder="Masukkan Angka 1-20"></TD>
+        </TR>
+        <TR>
+            <TD ALIGN="RIGHT" VALIGN="top">Jenis Ruangan : <BR></TD>
+            <TD><INPUT TYPE="radio" NAME="JENIS"> A. Ruang Perokok <BR>
+                <INPUT TYPE="radio" NAME="JENIS"> B. Ruang Ber-AC
+            </TD>
+        </TR>
+        <TR>
+            <TD ALIGN="RIGHT" VALIGN="top">Status Penyewa : <BR></TD>
+            <TD><INPUT TYPE="radio" NAME="TARIF"> Umum <BR>
+                <INPUT TYPE="radio" NAME="TARIF"> Anggota
+            </TD>
+        </TR>
+        <TR>
+            <TD ALIGN="RIGHT" VALIGN="top">Lama Rental : </TD>
+            <TD><INPUT TYPE="text" NAME="LamaRental" placeholder="Satuan dalam Jam"> </TD>
+        </TR>
+        <TR>
+            <TD ALIGN="RIGHT" VALIGN="top">Jumlah Print : </TD>
+            <TD><INPUT TYPE="text" NAME="JumlahPrint" placeholder="Masukkan dengan Angka"> </TD>
+        </TR>
+
+
+       <TR>
+            <TD COLSPAN="2" ALIGN="center" VALIGN="top"><HR>
+             <INPUT TYPE="button" VALUE="Cek & Hitung" ONCLICK="validasi()">
+             <INPUT TYPE="reset" VALUE="Hapus"><HR></TD>
+       </TR>
+        <TR>
+            <TD COLSPAN="2" ALIGN="center" VALIGN="top">Hasil Data</TD>
+        </TR>
+        <TR>
+            <TD ALIGN="RIGHT">Jumlah Biaya Rental :</TD>
+            <TD><INPUT  TYPE="text" NAME="bire"   READONLY></TD>
+        </TR>
+        <TR>
+            <TD ALIGN="RIGHT">Jumlah Biaya Print :</TD>
+            <TD><INPUT  TYPE="text" NAME="jupri"   READONLY></TD>
+        </TR>
+        <TR>
+            <TD ALIGN="RIGHT">Total bayar :</TD>
+            <TD><INPUT  TYPE="text" NAME="subtotal"   READONLY></TD>
+        </TR>
+        <TR><TD>&nbsp;</TD></TR>
+       </TABLE>
+    </FORM>
+</BODY>
+</HTML>

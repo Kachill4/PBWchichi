@@ -1,0 +1,38 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE = "JavaScript">
+   function validasi(){
+      npm = document.frm.xnpm.value;
+      if (npm==""){
+         alert("Data NPM tidak boleh dikosongkan !");
+         document.frm.xnpm.focus(); 
+      }
+      else if (isNaN(npm)){
+      alert("Data NPM hanya terdiri atas angka !");
+         document.frm.xnpm.focus(); 
+      }
+      else if (npm.length!=10){
+         alert("Data NPM harus berupa 10 angka !");
+         document.frm.xnpm.focus(); 
+      }
+      else{
+         alert("Data NPM sudah benar !");
+      }
+   }
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM NAME="frm">
+   <TABLE>
+   <TR>
+      <TD>N P M :</TD>
+      <TD><INPUT TYPE="text" NAME="xnpm"></TD>
+   </TR>
+   <TR>
+      <TD COLSPAN="2" ALIGN="center"> <HR>
+         <INPUT TYPE="button" VALUE="Cek Validasi" ONCLICK="validasi()">
+         <INPUT TYPE="reset" VALUE="Hapus"> <HR> </TD>
+   </TR>
+   </TABLE>
+</FORM></BODY></HTML>

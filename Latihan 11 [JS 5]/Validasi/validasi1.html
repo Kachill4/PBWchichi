@@ -1,0 +1,36 @@
+<HTML>
+
+<HEAD>
+  <SCRIPT LANGUAGE = "JavaScript">
+    function validasi(){
+        d1 = document.frm.data1.value;
+        d2 = document.frm.data2.value;
+        if ((d1=="")||(d2==""))
+            {alert("Data tidak boleh dikosongkan !");}
+        else
+            {alert("Data sudah terisi seluruhnya !");}
+    }
+  </SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM NAME="frm">
+    <TABLE>
+    <TR>
+        <TD>Data Pertama :</TD>
+        <TD><INPUT TYPE="text" NAME="data1"></TD>
+    </TR>
+    <TR>
+        <TD>Data Kedua :</TD>
+        <TD><INPUT TYPE="text" NAME="data2"></TD>
+    </TR>
+    <TR>
+        <TD COLSPAN="2" ALIGN="center"><HR>
+            <INPUT TYPE="button" VALUE="Cek Validasi" ONCLICK="validasi()">
+            <INPUT TYPE="reset" VALUE="Hapus"><HR></TD>
+    </TR>
+    </TABLE>
+</FORM>
+</BODY>
+
+</HTML>

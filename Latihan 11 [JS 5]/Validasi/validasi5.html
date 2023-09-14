@@ -1,0 +1,60 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE = "JavaScript">
+   function hitung(){
+      a = document.frm.alas.value;
+      t = document.frm.tinggi.value;
+      if (a==""){
+      alert("Data alas harus diisi !");
+         document.frm.alas.focus();
+      }
+      else if (isNaN(a)){
+         alert("Data alas harus berupa angka !");
+         document.frm.alas.focus();
+      }
+      else if (a<=0){
+         alert("Data alas harus positif !");
+         document.frm.alas.focus();
+      }
+      else if (t==""){
+      alert("Data tinggi harus diisi !");
+         document.frm.tinggi.focus();
+      }
+      else if (isNaN(t)){
+         alert("Data tinggi harus berupa angka !");
+         document.frm.tinggi.focus();
+      }
+      else if (t<=0){
+         alert("Data tinggi harus positif !");
+         document.frm.tinggi.focus();
+      }
+      else{
+         ls = 0.5 * a * t;
+         document.frm.luas.value = ls; 
+      } 
+   }
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<FORM NAME="frm">
+   <TABLE>
+   <TR>
+      <TD>Alas :</TD>
+      <TD><INPUT TYPE="text" NAME="alas"></TD>
+   </TR>
+   <TR>
+      <TD>Tinggi :</TD>
+      <TD><INPUT TYPE="text" NAME="tinggi"></TD>
+   </TR>
+   <TR>
+      <TD COLSPAN="2" ALIGN="center"><HR> 
+         <INPUT TYPE="button" VALUE="Cek & Hitung" ONCLICK="hitung()">
+         <INPUT TYPE="reset" VALUE="Hapus"><HR></TD>
+   </TR>
+   <TR>
+      <TD>Luas segitiga :</TD>
+      <TD><INPUT TYPE="text" NAME="luas"></TD>
+   </TR>
+   </TABLE>
+</FORM></BODY></HTML>
