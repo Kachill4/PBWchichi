@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>REGISTRASI</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://localhost/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="http://localhost/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body style="height:1500px">
+<!-- Set navbar fixed top --> 
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top"> 
+  <div class="container-fluid">
+    <!-- Bagian gambar logo --> 
+    <a class="navbar-brand" href="#">
+      <img src="hat.png" alt="Logo" style="width:40px;" class="rounded-pill">
+    </a>
+	
+	<!-- Tombol collapse bar -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+	<!-- Dropdown link with collapse bar -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="FEB.html">FEB</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="FISIP.html">FISIP</a>
+          </li> 
+          <li class="nav-item">
+              <a class="nav-link" href="REGISTRASI.html">REGISTRASI</a>
+          </li>  
+      </ul>
+    </div>
+  </div>
+</nav><br><br><br><br>
+
+<div class="container">
+  <h2>Registrasi Mahasiswa Baru</h2>
+  <form><BR>
+    <label for="tb">Nama Lengkap :</label>
+    <input type="text" class="form-control" id="nl" placeholder="Isikan Nama Lengkap" name="nama">
+	
+    <br><label for="almt">Alamat :</label>
+    <input type="text" class="form-control" id="almt" placeholder="Isikan Alamat" name="alamat">
+    
+    <br><label for="as">Asal SMA/SMK :</label>
+    <input type="text" class="form-control" id="as" placeholder="Isikan Nama SMA/SMK" name="alamat">
+	
+	<br><label for="cb" class="form-label">Pilihan Kelas :</label>
+    <select class="form-select" id="cb" name="cbx">
+      <option>Reguler</option>
+      <option>Eksekutif</option>
+    </select>
+	
+    <br>Radio Button :<br>
+    <input type="radio" class="form-check-input" id="rb1" name="opsi" value="1" checked>
+    <label class="form-check-label" for="rb1">Fakultas Ekonomi & Bisnis</label>
+	<input type="radio" class="form-check-input" id="rb2" name="opsi" value="2">
+    <label class="form-check-label" for="rb2">Falkutas Ilmu Sosial & Ilmu Politik</label>	
+	
+	<br><br><button type="submit" class="btn btn-primary">Rekam</button>
+    <button type="reset" class="btn btn-primary">Reset</button>
+  </form>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Form Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="http://localhost/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="http://localhost/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+  <h2>Contoh Pembuatan Form</h2>
+  <form>
+    <label for="tb">Text Box :</label>
+    <input type="text" class="form-control" id="tb" placeholder="Isikan nama lengkap" name="tbx">
+	
+    <br><label for="pas">Password :</label>
+    <input type="password" class="form-control" id="pas" placeholder="Isikan password" name="pasx">
+	
+	<br><label for="ta">Text Area :</label>
+    <textarea class="form-control" id="ta" name="tax"></textarea>
+	
+	<br><label for="cb" class="form-label">Combo Box :</label>
+    <select class="form-select" id="cb" name="cbx">
+      <option>A</option>
+      <option>B</option>
+      <option>C</option>
+    </select>
+	
+    <br>Check Box :<br>
+    <input type="checkbox" class="form-check-input" id="cek1" name="opsi1" checked>
+    <label class="form-check-label" for="cek1">Opsi Pertama</label>
+	<input type="checkbox" class="form-check-input" id="cek2" name="opsi2">
+    <label class="form-check-label" for="cek2">Opsi Kedua</label>
+    
+    <br><br>Radio Button :<br>
+    <input type="radio" class="form-check-input" id="rb1" name="opsi" value="1" checked>
+    <label class="form-check-label" for="rb1">Opsi Pertama</label>
+	<input type="radio" class="form-check-input" id="rb2" name="opsi" value="2">
+    <label class="form-check-label" for="rb2">Opsi Kedua</label>	
+	
+	<br><br><button type="submit" class="btn btn-primary">Rekam</button>
+  </form>
+</div>
+</body>
+</html>
+
