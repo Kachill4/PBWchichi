@@ -1,0 +1,36 @@
+<HTML>
+
+<HEAD>
+    <TITLE> SUHU_2020130024 </TITLE>
+</HEAD>
+
+<BODY>
+    <P>Konversi Suhu Fahrenheit ke Celcius</P>
+    <p id="hasil">
+        Kosong
+    </p>
+    <SCRIPT LANGUAGE="JAVASCRIPT">
+
+    do {
+        let text; let pilihan = true;
+        let F = prompt("Suhu dalam Fahrnheit :");
+        function Konversi() {
+            let C = 5 / 9 * (F - 32);
+            return C;
+        }
+        if (F != null || F == "") {
+            text = "Suhu dalam Fahrnheit = " + F + " "
+            + "\nSuhu dalam Celcius   = " + Konversi();
+            pilihan = true;
+        } else {
+            text = "Anda Ingin Keluar?";
+            pilihan = false;
+        }
+         document.getElementById("hasil").innerHTML = text;
+         Tombol = alert(text);
+    } while (confirm("Apakah ingin mengkonversi kembali??") == true);
+    </SCRIPT>
+
+</BODY>
+
+</HTML>
