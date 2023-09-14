@@ -1,0 +1,35 @@
+<HTML>
+    <BODY><PRE>
+      <SCRIPT LANGUAGE="JAVASCRIPT">
+        document.writeln(" ");
+        Nama = prompt("Nama Pemohon Kredit :");
+        document.writeln("Nama Pemohon Kredit :", Nama);
+
+        Kode = prompt("Kode Motor (A/B/C/D) : ").toUpperCase();
+        document.writeln("Kode Motor  :", Kode);
+
+        LK = prompt("Lama Kredit (12/24/36) :");
+        document.writeln("Lama Kredit :", LK);
+
+        UM = prompt("Uang Muka :");
+        document.writeln("Uang Muka   :", UM);
+        document.writeln(" ");
+
+        switch (Kode){
+            case "A" : MM = "Suzuki Shogun" ; HM = 11800000 ;break;
+            case "B" : MM = "Honda Supra"   ; HM = 11500000 ;break;
+            case "C" : MM = "Yamaha Jupiter"; HM = 12400000 ;break;
+            case "D" : MM = "Kawasaki Blitz"; HM = 12250000 ;break;
+            default  : MM = "-"; HM = 0 ; break;
+        }
+
+        JK=HM-UM;
+        AGS= JK/LK
+        document.writeln("Merk Motor    : ", MM);
+        document.writeln("Harga Motor   : Rp", HM);
+        document.writeln("Jumlah Kredit : Rp", JK);
+        document.writeln("Angsuran /bln : Rp", AGS);
+
+      </SCRIPT>
+    </PRE></BODY>
+  </HTML>

@@ -1,0 +1,27 @@
+<HTML>
+  <BODY><PRE>
+    <SCRIPT LANGUAGE="JAVASCRIPT">
+        document.writeln(" ");
+        Nama = prompt("Nama Barang :");
+        document.writeln("Nama Barang  = ", Nama);
+
+        Harga = prompt("Harga Satuan :");
+        document.writeln("Harga Satuan = Rp", Harga);
+
+        Unit = prompt("Jumlah Unit :");
+        document.writeln("Jumlah Unit  = ", Unit, " Unit");
+        document.writeln(" ");
+
+        Total=Harga*Unit;
+        document.writeln("Harga Total  = ", Total);
+
+        if (Total > 25000){
+            PPN = Total*(10/100);
+        }else{
+            PPN = 0;
+        }
+        document.writeln("PPN          = ", PPN);
+        document.writeln("Jumlah Bayar = ", Total +PPN);
+    </SCRIPT>
+  </PRE></BODY>
+</HTML>

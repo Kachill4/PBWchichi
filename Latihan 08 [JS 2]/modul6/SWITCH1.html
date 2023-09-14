@@ -1,0 +1,20 @@
+<HTML> 
+  <BODY><PRE>
+    <SCRIPT LANGUAGE = "JavaScript">
+    Gol = prompt("Golongan :");
+    switch (Gol){
+        case "1" : GP = 700000;  TJ = 350000;break;
+        case "2" : GP = 800000;  TJ = 450000;break;
+        case "3" : GP = 950000;  TJ = 750000;break;
+        case "4" : GP = 1100000; TJ = 750000;break;
+        default  : GP = 0;       TJ = 0;     break;
+    }
+    Jumlah = GP + TJ;
+        document.writeln("Gaji Berdasarkan Golongan");
+        document.writeln("Golongan    : ", Gol);
+        document.writeln("Gaji Pokok  : ", GP);
+        document.writeln("Tunjangan   : ", TJ);
+        document.writeln("Jumlah Gaji : ",Jumlah);
+    </SCRIPT></PRE>
+  </BODY>
+</HTML>
