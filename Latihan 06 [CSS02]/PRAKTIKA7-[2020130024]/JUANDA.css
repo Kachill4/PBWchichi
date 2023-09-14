@@ -1,0 +1,97 @@
+.judul1 {
+    font-family: 'Times New Roman';
+    font-size: 24px;
+    font-weight : bold;}
+.judul2 {
+    font-family: Papyrus;
+    font-size: 20px;
+    font-weight : bold;}
+.judul3 {
+    font-family: 'Times New Roman';
+    font-size: 18px;
+    font-weight : bold;
+    color: #ffffff;
+    background-color : rgb(30,63,172);
+    text-align : center;}
+.isi {
+    font-family: 'Times New Roman';
+    font-size: 16px;
+    text-align : justify;}
+.style1 {
+    font-family: Helvetica;
+    font-size: 12px;
+    background-color: #dcddf7;
+    border: 1px solid #dcddf7;
+    border-radius: 5px;
+    padding: 15px;
+    width: 350px;}
+.style2 {
+    font-family: Bahnschrift;
+    font-size: 12px;
+    border : 2px solid #568f6f;
+    border-radius: 8px;
+    padding : 15px;
+    width: 300px;}
+.style3 {
+    font-family: Bahnschrift;
+    font-size: 12px;
+    border : 2px solid #ffffff;
+    border-radius: 8px;
+    padding : 15px;
+    width: 300px;}
+.tombol1 {
+    color: white;
+    background-color: #568f6f;
+    border: 1px solid #568f6f;
+    border-radius: 5px;
+    padding: 10px;
+    width: 125px;} 
+.tombol1:hover {  
+    background-color: rgb(4, 131, 4);}
+.tombol1:active {  
+    background-color: rgb(35, 182, 35);}
+.tombol2 {
+    color: white;
+    background-color: #568f6f;
+    border: 1px solid #568f6f;
+    border-radius: 5px;
+    padding: 10px;
+    width: 125px;} 
+.tombol2:hover {  
+    background-color: rgb(143,28,8);}
+.tombol2:active {  
+    background-color: rgb(204, 56, 30);}
+.tombol3 {
+    color: white;
+    background-color: #5e61bf;
+    border: 1px solid #5e61bf;
+    border-radius: 5px;
+    padding: 10px;
+    width: 125px;} 
+.tombol3:hover {  
+    background-color: #494cac;}
+.tombol3:active {  
+    background-color: #7f82d6;}
+
+.table1 {
+    font-family: 'Times New Roman';
+    font-size: 12pt;
+}
+
+    tr:nth-child(even) { 
+        background-color: #bbc3df;
+    }
+    
+    tr:hover { 
+        background-color: #e6d89c;
+    }
+    
+    th {
+        background-color: #E7E49F;
+        padding: 8px;
+    }
+    
+    td {
+        padding: 10px;
+    }
+    

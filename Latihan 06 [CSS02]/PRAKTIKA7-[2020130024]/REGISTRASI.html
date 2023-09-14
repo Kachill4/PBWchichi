@@ -1,0 +1,135 @@
+<HTML>
+<HEAD>
+    <SCRIPT LANGUAGE = "JavaScript">
+    function validasi(){
+//Nama Lengkap
+        nama = document.frm.xnama.value;
+        if (nama==""){
+            alert("Nama belum terisi !");
+            document.frm.xnama.focus();
+        }
+        else{
+            nama = document.frm.xnama.value;
+        }
+
+//Alamat
+        alamat = document.frm.xalamat.value;
+        if (alamat==""){
+            alert("Alamat belum terisi !");
+            document.frm.xalamat.focus(); 
+        }
+        else{
+            alamat = document.frm.xalamat.value;
+        }
+
+//Tempat Lahir
+        kota = document.frm.xkota.value;
+        if (kota==""){
+            alert("Tempat Lahir belum terisi !");
+            document.frm.xkota.focus(); 
+        }
+        else{
+            kota = document.frm.xkota.value;
+        }
+
+//Nama Asal Sekolah
+        asal = document.frm.xasal.value;
+        if (asal==""){
+            alert("Nama Asal Sekolah belum terisi !");
+            document.frm.xasal.focus(); 
+        }
+        else{
+            asal = document.frm.xasal.value;
+        }
+
+//Tahun Lulus
+        pilihan = document.frm.tahun.selectedIndex;
+        switch (pilihan){
+            case 0 : thn = "-" ; break;
+            case 1 : thn = "2017 kebawah"; break;
+            case 2 : thn = "2018"; break;
+            case 3 : thn = "2019"; break;
+            case 4 : thn = "2020";break;
+            case 5 : thn = "2021";
+        }
+        document.frm.xtahun.value = thn;
+
+//Jurusan
+        pilihan1 = document.frm.jurusan.selectedIndex;
+            switch (pilihan1){
+                case 0 : jrs = "-" ; break;
+                case 1 : jrs = "Teknik Sipil"; break;
+                case 2 : jrs = "Teknik Arsitektur"; break;
+                case 3 : jrs = "Teknik Elektro"; break;
+                case 4 : jrs = "Teknik Informatika";break;
+                case 5 : jrs = "Teknik Industri";
+            }
+        document.frm.xjurusan.value = jrs;
+    }
+    </SCRIPT>
+    <LINK rel="stylesheet" href="JUANDA.css">
+</HEAD>
+
+<BODY>
+    <DIV class="judul1">Penerimaan Mahasiswa Baru <BR>Universitas Juanda</DIV>
+    <FIELDSET CLASS="style3">
+        <INPUT TYPE="button" 
+        VALUE="Form Registrasi" 
+        CLASS ="tombol3" 
+        ONCLICK="location.href='REGISTRASI.html'">
+        <INPUT TYPE="button" VALUE="Akreditasi" CLASS="tombol3" ONCLICK="location.href='AKREDITASI.html'">
+    </FIELDSET>
+    <DIV class="judul2">Input Formulir Registrasi</DIV><BR>
+
+    <FORM NAME="frm">
+    <FIELDSET CLASS="style2">
+      <LEGEND>Biodata Calon Mahasiswa</LEGEND>
+      Nama Lengkap : <BR>
+      <INPUT TYPE="text" NAME="xnama" CLASS="style1" placeholder="Andri Sembiring"><BR><BR>
+      Alamat : <BR>
+      <TEXTAREA TYPE="text" NAME="xalamat" CLASS="style1" placeholder="Jl. ABC No.123, Bandung"></TEXTAREA><BR><BR> 
+      Tempat Lahir : <BR>
+      <INPUT TYPE="text" NAME="xkota" CLASS="style1" placeholder="Kabanjahe"><BR><BR>
+      Tanggal Lahir : <BR>
+      <input TYPE="date" NAME="tanggal" CLASS="style1"><BR><BR> 
+      Nama Asal Sekolah : <BR>
+      <INPUT TYPE="text" NAME="xasal" CLASS="style1" placeholder="SMA XYZ Bandung"><BR><BR>
+      Tahun Lulus : <BR>
+      <SELECT NAME="xtahun" CLASS="style1">
+        <OPTION>(pilihan) 
+        <OPTION>2017 kebawah
+        <OPTION>2018
+        <OPTION>2019
+        <OPTION>2020
+        <OPTION>2021
+      </SELECT><BR><BR>
+    
+    </FIELDSET>
+    
+    <FIELDSET CLASS="style2">
+      <LEGEND>Pilihan Program Studi</LEGEND>
+      Jenjang Pendidikan<BR>
+    <INPUT TYPE="radio" NAME="xjenjang"> Diploma III (D3) <BR>
+    <INPUT TYPE="radio" NAME="xjenjang"> Sarjana (S1) <BR><BR>
+    Jurusan: <BR>
+    <SELECT NAME="xjurusan" CLASS="style1">
+        <OPTION>(pilihan) 
+        <OPTION>Teknik Sipil
+        <OPTION>Teknik Arsitektur
+        <OPTION>Teknik Elektro
+        <OPTION>Teknik Informatika
+        <OPTION>Teknik Industri
+    </SELECT><BR><BR>
+    Kelas<BR>
+    <INPUT TYPE="radio" NAME="xkelas"> Reguler (Senin-Jumat 08.00-16.00) <BR>
+    <INPUT TYPE="radio" NAME="xkelas"> Karyawan (Senin-Jumat 17.00-21.00) <BR>
+    <INPUT TYPE="radio" NAME="xkelas"> Eksekutif (Sabtu 07.00-18.00) <BR><BR>
+    </FIELDSET>
+
+    <FIELDSET CLASS="style3">
+      <INPUT TYPE="button" VALUE="Rekam" CLASS ="tombol1" ONCLICK="validasi()">
+      <INPUT TYPE="reset" VALUE="Batal" CLASS="tombol2">
+    </FIELDSET>
+</FORM></BODY>
+</HTML>
+    
