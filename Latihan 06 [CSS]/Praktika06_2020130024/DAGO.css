@@ -1,0 +1,58 @@
+.img1 {
+    border-radius: 50%;
+}
+
+.JudulUtama {
+    font-family: "georgia" ;
+    font-size:20pt; 
+    text-align:center;
+}
+
+.tr1 {
+    border-bottom: 1px solid black;
+}
+
+.Judul1 {
+    font-family : "times new roman" ;
+    font-size:14pt;
+    color: #3434A4;
+    text-decoration:overline underline;
+    font-weight : bold;
+}
+
+.Isi {
+    font-family : "times new roman" ;
+    font-size:12pt;
+    font-style:italic;
+    text-align:justify;
+}
+
+.a {
+    list-style-image: url('stamp.gif');
+    font-family : "times new roman" ;
+    font-size:12pt;
+    font-style:italic;
+}
+
+table {
+    font-family: Arial;
+    font-size: 12pt;
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) { 
+    background-color: #C2BFDC;
+}
+
+tr:hover { 
+    background-color: #e6d89c;
+}
+
+th {
+    background-color: #E7E49F;
+    padding: 8px;
+}
+
+td {
+    padding: 10px;
+}
