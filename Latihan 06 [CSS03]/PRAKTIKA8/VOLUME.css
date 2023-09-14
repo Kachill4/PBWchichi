@@ -1,0 +1,60 @@
+body {
+    padding: 50px;
+    background: black;}
+  .title {
+    font-family: "Times New Roman";
+    font-size: 22pt;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    padding: 25px;
+    background: white;}
+  .menu {
+    font-family: Arial;
+    font-size: 12pt;
+    text-align: Center;
+    padding: 10px;
+    background: #4d50a1;}
+  .content {
+    font-family: "Georgia";
+    font-size: 14pt;
+    text-align: justify;
+    padding: 10px;
+    background: #c4d6f2;}
+
+  /* style sheet untuk tombol */
+    .tombol {
+       font-size: 12pt;
+       font-family: Arial;
+       color: white;
+       background-color: #5e61bf;
+       border: 1px solid #5e61bf;
+       border-radius: 3px;
+       padding: 7px;
+       width: 120px;}
+    .tombol:hover {
+       background-color: #868adb;}
+    .tombol:active {  
+       background-color: #73e76d;}
+
+    .tombol1 {
+       font-size: 12pt;
+       font-family: Arial;
+       color: white;
+       background-color: #5e61bf;
+       border: 1px solid #5e61bf;
+       border-radius: 3px;
+       padding: 7px;
+       width: 120px;}
+    .tombol1:hover {
+       background-color: #868adb;}
+    .tombol1:active {  
+       background-color: #eb4949;}
+
+  /* style untuk text box */
+    .box {
+       background-color: #fffae0;
+       border: 1px solid #fffae0;
+       border-radius: 5px;
+       padding: 7px;
+       width: 200px;}

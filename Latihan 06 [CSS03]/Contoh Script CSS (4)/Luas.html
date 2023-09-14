@@ -1,0 +1,105 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE = "JavaScript">
+function Hitung()
+{
+   Panjang = document.frm.P.value;
+   Lebar = document.frm.L.value;
+   if (Panjang=="")
+   {
+	  alert("Data panjang harus diisi !");
+      document.frm.P.focus();
+   }
+   else if (isNaN(Panjang))
+   {
+      alert("Data panjang harus berupa angka !");
+      document.frm.P.focus();
+   }
+   else if (Panjang<=0)
+   {
+      alert("Data panjang harus positif !");
+      document.frm.P.focus();
+   }
+   else if (Lebar=="")
+   {
+	alert("Data lebar harus diisi !");
+      document.frm.L.focus();
+   }
+   else if (isNaN(Lebar))
+   {
+      alert("Data lebar harus berupa angka !");
+      document.frm.L.focus();
+   }
+   else if (Lebar<=0)
+   {
+      alert("Data lebar harus positif !");
+      document.frm.L.focus();
+   }
+   else
+   {
+      Luas = Panjang * Lebar; 
+      document.frm.H.value = Luas;
+   } 
+}
+</SCRIPT>
+
+<STYLE>
+body {
+  padding: 50px;
+  background: black;}
+.title {
+  font-family: "Times New Roman";
+  font-size: 22pt;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  padding: 25px;
+  background: white;}
+.content {
+  font-family: "Georgia";
+  font-size: 14pt;
+  text-align: justify;
+  padding: 10px;
+  background: #c4d6f2;}
+
+/* style sheet untuk tombol */
+  .tombol {  
+     font-size: 12pt; 
+	 font-family: Arial;
+     color: white;
+	 background-color: #5e61bf;
+     border: 1px solid #5e61bf;	 
+	 border-radius: 3px;
+	 padding: 7px;
+	 width: 120px;} 
+  .tombol:hover {  
+	 background-color: #62a885;}	 
+  
+/* style untuk text box */
+  .box {  
+	 background-color: #fffae0;
+     border: 1px solid #fffae0;
+	 border-radius: 5px;
+	 padding: 7px;
+     width: 200px;}    
+</STYLE></HEAD>
+
+<BODY>
+<DIV CLASS="title">
+Hitung Luas Persegi Panjang
+</DIV>
+
+<DIV CLASS="content">
+<FORM NAME="frm"><TABLE ALIGN="center">
+<TR><TD>Panjang :</TD>
+    <TD><INPUT TYPE="text" NAME="P" CLASS="box"></TD></TR>
+<TR><TD>Lebar :</TD>
+    <TD><INPUT TYPE="text" NAME="L" CLASS="box"></TD></TR>
+<TR><TD COLSPAN="2" ALIGN="center"><HR>
+    <INPUT TYPE="button" VALUE="Hitung Luas"  CLASS="tombol" ONCLICK="Hitung()">
+    <INPUT TYPE="reset" VALUE="Hapus" CLASS="tombol" ><HR></TD></TR>
+<TR><TD>Luas :</TD>
+    <TD><INPUT TYPE="text" NAME="H" CLASS="box" READONLY></TD></TR>
+</TABLE></FORM>
+</DIV>
+</BODY></HTML>

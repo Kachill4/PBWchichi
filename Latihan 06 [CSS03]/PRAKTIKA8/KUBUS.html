@@ -1,0 +1,60 @@
+<HTML>
+    <HEAD>
+       <SCRIPT LANGUAGE = "JavaScript">
+        function Hitung(){
+           Sisi = document.frm.S.value;
+           if (Sisi==""){
+              alert("Data Sisi harus diisi !");
+              document.frm.S.focus();
+           }
+           else if (isNaN(Sisi)){
+              alert("Data Sisi harus berupa angka !");
+              document.frm.S.focus();
+           }
+           else if (Sisi<=0){
+              alert("Data Sisi harus positif !");
+              document.frm.S.focus();
+           }
+           else{
+              Luas = Sisi * Sisi * Sisi;
+              document.frm.H.value = Luas;
+           }
+        }
+        </SCRIPT>
+    
+        <LINK rel="stylesheet" href="VOLUME.css">
+    </HEAD>
+    
+    <BODY>
+        <DIV CLASS="title">
+            Perhitungan Volume Benda<BR>
+            " K - U - B - U - S "
+         </DIV>
+    
+       <DIV CLASS="menu">
+          <INPUT TYPE="button" VALUE="Volume Balok" 
+             CLASS="tombol" ONCLICK="location.href='BALOK.html'">
+          <INPUT TYPE="button" VALUE="Volume Kubus" 
+             CLASS="tombol" ONCLICK="location.href='KUBUS.html'">
+          <INPUT TYPE="button" VALUE="Volume Tabung " 
+             CLASS="tombol" ONCLICK="location.href='TABUNG.html'">
+        </DIV>
+    
+       <DIV CLASS="content">
+       <FORM NAME="frm"><TABLE ALIGN="center">
+       <TR><TD>Panjang Sisi :</TD>
+                <TD><INPUT TYPE="text" NAME="S" CLASS="box"></TD>
+       </TR>
+       <TR><TD COLSPAN="2" ALIGN="center"><HR>
+            <INPUT TYPE="button" VALUE="Hitung Volume"  CLASS="tombol" ONCLICK="Hitung()">
+            <INPUT TYPE="reset" VALUE="Hapus" CLASS="tombol1" ><HR></TD>
+       </TR>
+       <TR><TD>Volume :</TD>
+            <TD><INPUT TYPE="text" NAME="H" CLASS="box" READONLY></TD>
+       </TR>
+        </TABLE>
+       </FORM>
+       </DIV>
+    </BODY>
+    </HTML>
+       

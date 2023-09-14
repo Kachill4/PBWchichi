@@ -1,0 +1,79 @@
+<HTML>
+    <HEAD>
+       <SCRIPT LANGUAGE = "JavaScript">
+        function Hitung(){
+           Radius = document.frm.R.value;
+           Tinggi = document.frm.T.value;
+           if (Radius==""){
+              alert("Data Radius harus diisi !");
+              document.frm.R.focus();
+           }
+           else if (isNaN(Radius)){
+              alert("Data Radius harus berupa angka !");
+              document.frm.R.focus();
+           }
+           else if (Radius<=0){
+              alert("Data Radius harus positif !");
+              document.frm.R.focus();
+           }
+    
+           else if (Tinggi==""){
+            alert("Data Tinggi harus diisi !");
+              document.frm.T.focus();
+           }
+           else if (isNaN(Tinggi)){
+              alert("Data Tinggi harus berupa angka !");
+              document.frm.T.focus();
+           }
+           else if (Tinggi<=0){
+              alert("Data Tinggi harus positif !");
+              document.frm.T.focus();
+           }
+    
+           else{
+            pi=22/7  
+            Luas = pi*Radius*Radius*Tinggi;
+              document.frm.H.value = Luas;
+           }
+        }
+        </SCRIPT>
+    
+        <LINK rel="stylesheet" href="VOLUME.css">
+    </HEAD>
+    
+    <BODY>
+        <DIV CLASS="title">
+            Perhitungan Volume Benda<BR>
+            " T - A - B - U - N - G "
+         </DIV>
+    
+       <DIV CLASS="menu">
+          <INPUT TYPE="button" VALUE="Volume Balok" 
+             CLASS="tombol" ONCLICK="location.href='BALOK.html'">
+          <INPUT TYPE="button" VALUE="Volume Kubus" 
+             CLASS="tombol" ONCLICK="location.href='KUBUS.html'">
+          <INPUT TYPE="button" VALUE="Volume Tabung " 
+             CLASS="tombol" ONCLICK="location.href='TABUNG.html'">
+        </DIV>
+    
+       <DIV CLASS="content">
+       <FORM NAME="frm"><TABLE ALIGN="center">
+       <TR><TD>Radius :</TD>
+            <TD><INPUT TYPE="text" NAME="R" CLASS="box"></TD>
+       </TR>
+       <TR><TD>Tinggi :</TD>
+            <TD><INPUT TYPE="text" NAME="T" CLASS="box"></TD>
+       </TR>
+       <TR><TD COLSPAN="2" ALIGN="center"><HR>
+            <INPUT TYPE="button" VALUE="Hitung Volume"  CLASS="tombol" ONCLICK="Hitung()">
+            <INPUT TYPE="reset" VALUE="Hapus" CLASS="tombol1" ><HR></TD>
+       </TR>
+       <TR><TD>Volume :</TD>
+            <TD><INPUT TYPE="text" NAME="H" CLASS="box" READONLY></TD>
+       </TR>
+        </TABLE>
+       </FORM>
+       </DIV>
+    </BODY>
+    </HTML>
+       

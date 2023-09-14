@@ -1,0 +1,95 @@
+<HTML>
+<HEAD>
+   <SCRIPT LANGUAGE = "JavaScript">
+    function Hitung(){
+       Panjang = document.frm.P.value;
+       Lebar = document.frm.L.value;
+       Tinggi = document.frm.T.value;
+       if (Panjang==""){
+          alert("Data panjang harus diisi !");
+          document.frm.P.focus();
+       }
+       else if (isNaN(Panjang)){
+          alert("Data panjang harus berupa angka !");
+          document.frm.P.focus();
+       }
+       else if (Panjang<=0){
+          alert("Data panjang harus positif !");
+          document.frm.P.focus();
+       }
+
+       else if (Lebar==""){
+        alert("Data lebar harus diisi !");
+          document.frm.L.focus();
+       }
+       else if (isNaN(Lebar)){
+          alert("Data lebar harus berupa angka !");
+          document.frm.L.focus();
+       }
+       else if (Lebar<=0){
+          alert("Data lebar harus positif !");
+          document.frm.L.focus();
+       }
+
+       else if (Tinggi==""){
+        alert("Data Tinggi harus diisi !");
+          document.frm.T.focus();
+       }
+       else if (isNaN(Tinggi)){
+          alert("Data Tinggi harus berupa angka !");
+          document.frm.T.focus();
+       }
+       else if (Tinggi<=0){
+          alert("Data Tinggi harus positif !");
+          document.frm.T.focus();
+       }
+
+       else{
+          Luas = Panjang * Lebar * Tinggi;
+          document.frm.H.value = Luas;
+       }
+    }
+    </SCRIPT>
+
+    <LINK rel="stylesheet" href="VOLUME.css">
+</HEAD>
+
+<BODY>
+   <DIV CLASS="title">
+      Perhitungan Volume Benda<BR>
+      " B - A - L - O - K "
+   </DIV>
+
+   <DIV CLASS="menu">
+      <INPUT TYPE="button" VALUE="Volume Balok" 
+         CLASS="tombol" ONCLICK="location.href='BALOK.html'">
+      <INPUT TYPE="button" VALUE="Volume Kubus" 
+         CLASS="tombol" ONCLICK="location.href='KUBUS.html'">
+      <INPUT TYPE="button" VALUE="Volume Tabung " 
+         CLASS="tombol" ONCLICK="location.href='TABUNG.html'">
+    </DIV>
+
+   <DIV CLASS="content">
+   <FORM NAME="frm"><TABLE ALIGN="center">
+   <TR><TD>Panjang :</TD>
+            <TD><INPUT TYPE="text" NAME="P" CLASS="box"></TD>
+   </TR>
+   <TR><TD>Lebar :</TD>
+        <TD><INPUT TYPE="text" NAME="L" CLASS="box"></TD>
+   </TR>
+   <TR><TD>Tinggi :</TD>
+        <TD><INPUT TYPE="text" NAME="T" CLASS="box"></TD>
+   </TR>
+   <TR><TD COLSPAN="2" ALIGN="center"><HR>
+        <INPUT TYPE="button" VALUE="Hitung Volume"  CLASS="tombol" ONCLICK="Hitung()">
+        <INPUT TYPE="reset" VALUE="Hapus" CLASS="tombol1" ><HR></TD>
+   </TR>
+   <TR><TD>Volume :</TD>
+        <TD><INPUT TYPE="text" NAME="H" CLASS="box" READONLY></TD>
+   </TR>
+    </TABLE>
+   </FORM>
+   </DIV>
+</BODY>
+</HTML>
+   
