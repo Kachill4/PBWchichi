@@ -1,0 +1,9 @@
+CONTOH CRUD DENGAN INPUTAN FORM BERUPA COMBO BOX & RADIO BUTTON
+PETUNJUK TES RUN 
+
+Setelah file CRUDX.ZIP di-unzip :
+1) Copy folder CRUDX ke C:\XAMPP\HTDOCS 
+2) Buka PHPMyAdmin, lalu import file PEKERJA.SQL
+3) Buka web browser, jalankan file INDEX.PHP :
+   http://localhost/crudx/index.php
+   
